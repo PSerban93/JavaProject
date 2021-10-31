@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -37,24 +35,6 @@ public class Main {
 
         System.out.println("ex_d");
         System.out.println(5 + 15 / 3 * 2 - 8 % 3 );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
 }
