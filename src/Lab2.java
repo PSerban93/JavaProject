@@ -24,7 +24,7 @@ public class Lab2 {
         print.printJava();
 
         print.printMediaNumerelor();
-        calc.media(10, 5, 8);
+        System.out.println(calc.media(10, 5, 8));
 
         print.printFrankenstein();
 
