@@ -31,28 +31,64 @@ public class Calculator {
 
     }
 
-    public double sum(int first, double second){
-        double result = first + second;
+    public static int adunare(int first, int second) {
+        System.out.println("Adunare:");
+        int result = first + second;
         return result;
 
     }
-    public double substract(int first, int second){
-        double result = first - second;
+
+    public static int scadere(int first, int second) {
+        System.out.println("Scadere:");
+        int result = first - second;
         return result;
 
     }
-    public double multiply(int first, int second){
-        double result = first * second;
+
+    public static int inmultire(int first, int second) {
+        System.out.println("Inmultire:");
+        int result = first * second;
         return result;
 
     }
-    public double divider(int first, int second){
+
+    public static double divide(double first, double second) {
+        System.out.println("Impartire:");
         double result = first / second;
         return result;
-
     }
-    public double modulo(int first, int second){
-        double result = first % second;
+
+    public static double media(double a, double b, double c) {
+        double rezultat = ((a + b + c)) / 3;
+        return rezultat;
+    }
+
+    public static int rest(int first, int second) {
+        int result = first % second;
         return result;
+    }
+    public static double grade(double first, double second) {
+        System.out.println( first + " °F"  );
+        double f = first;
+        System.out.println("°C = ");
+        double c = second;
+        double rezultatgrade = c;
+        return rezultatgrade;
+    }
+    public static double convert(double first, double second) {
+        System.out.println(+first + " Inch to");
+        double inch = first;
+        System.out.println("Metri = ");
+        double metri = second;
+        double rezultatconvert = metri;
+        return rezultatconvert;
+    }
+    public static void calculviteza(double distance, int hour, int minutes, int seconds) {
+        double mps = distance / ((hour * 3600) + (minutes * 60) + seconds);
+        System.out.println("\nMetrii pe secunda\n" + mps);
+        double kph = mps * 3.6;
+        System.out.println("\n Km pe ora\n" + kph);
+        double milph = kph / 1.609;
+        System.out.println("\n Mile pe ora\n" + milph);
     }
 }
