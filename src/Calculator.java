@@ -1,4 +1,5 @@
 public class Calculator {
+
     public static int suma(int Nr1, int Nr2) {
         int rezultat = Nr1 + Nr2;
         return rezultat;
@@ -67,6 +68,8 @@ public class Calculator {
         int result = first % second;
         return result;
     }
+
+
     public static double grade(double first, double second) {
         System.out.println( first + " °F"  );
         double f = first;
@@ -91,4 +94,6 @@ public class Calculator {
         double milph = kph / 1.609;
         System.out.println("\n Mile pe ora\n" + milph);
     }
+
+
 }

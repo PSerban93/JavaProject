@@ -1,6 +1,11 @@
 public class Lab2 {
     public static int x = 35;
     public static int y = 10;
+    public static double f = 117;
+    public static double c = (f - 32) * 5 / 9;
+    public static double inch = 30;
+    public static double metri = inch * 0.0254;
+
     public static void main(String[] args) {
         Calculator calc = new Calculator();
         Print print = new Print();
@@ -33,14 +38,10 @@ public class Lab2 {
         System.out.println(rezultatrest);
 
         print.printCelsiusCalculator();
-        double f = 117;
-        double c = (f - 32) * 5 / 9;
         double rezultatgrade = calc.grade(f, c);
         System.out.println(rezultatgrade);
 
         print.printInchCalculator();
-        double inch = 30;
-        double metri = inch * 0.0254;
         double rezultatconvert = calc.convert(inch, metri);
         System.out.println(rezultatconvert);
 
