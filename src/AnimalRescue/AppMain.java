@@ -4,110 +4,114 @@ public class AppMain {
 
 
     public static void main(String[] args) {
-        Dog ares = new Dog();
-        ares.name = "Ares";
-        ares.breed = "French bulldog";
-        ares.color = "Grey";
-        ares.age = 1.6F;
-        ares.health = 10;
-        ares.hungry = 1;
-        ares.mood = 10;
-        ares.weight = 12.9F;
-        ares.heightInCm = 35;
-        System.out.println("Name: " + ares.name);
-        System.out.println("Breed: " + ares.breed);
-        System.out.println("Age: " + ares.age + " years");
-        System.out.println("Health: " + ares.health);
-        System.out.println("Hungry: " + ares.hungry);
-        System.out.println("Mood: " + ares.mood);
-        System.out.println("Weight: " + ares.weight + " Kg");
-        System.out.println("Height: " + ares.heightInCm + " cm");
+
+        Animal ares = new Animal();
+        ares.setName("Ares");
+        ares.setBreed("French bulldog");
+        ares.setColor("Grey");
+        ares.setAge(1.6F);
+        ares.setHealth(10);
+        ares.setHungry((byte) 1);
+        ares.setMood((byte) 10);
+        ares.setWeight(12.9F);
+        ares.setHeightInCm(35.3F);
+
+        System.out.println("Name: " + ares.getName());
+        System.out.println("Breed: " + ares.getBreed());
+        System.out.println("Color: " + ares.getColor());
+        System.out.println("Age: " + ares.getAge() + " years");
+        System.out.println("Health: " + ares.getHealth());
+        System.out.println("Hungry: " + ares.getHungry());
+        System.out.println("Mood: " + ares.getMood());
+        System.out.println("Weight: " + ares.getWeight() + " Kg");
+        System.out.println("Height: " + ares.getHeightInCm() + " cm");
         //System.out.println("Favorite Food: " + ares.favoritefood);//
         ares.eat();
         ares.sleep();
         ares.speak();
         ares.play();
 
-        DogFood aresfood = new DogFood();
+        AnimalFood aresfood = new AnimalFood();
 
-        aresfood.foodname = "D&D ";
-        System.out.println("\nFood Name: " + aresfood.foodname);
-        aresfood.price = "250 Lei";
-        System.out.println("Price: " + aresfood.price);
-        aresfood.quantity = "5 kg";
-        System.out.println("Quantity: " + aresfood.quantity);
-        aresfood.stock = "In Stock";
-        System.out.println(aresfood.stock);
+        aresfood.setFoodname("D&D ");
+        System.out.println("\nFood Name: " + aresfood.getFoodname());
+        aresfood.setPrice("250 Lei");
+        System.out.println("Price: " + aresfood.getPrice());
+        aresfood.setQuantity("5 kg");
+        System.out.println("Quantity: " + aresfood.getQuantity());
+        aresfood.setStock("In Stock");
+        System.out.println(aresfood.getStock());
 
         RecreationalActivity aresrecactivity = new RecreationalActivity();
-        aresrecactivity.recreationalname = "Running";
-        System.out.println("\nRecreational Activity: " + aresrecactivity.recreationalname);
+        aresrecactivity.setRecreationalname("Running");
+        System.out.println("\nRecreational Activity: " + aresrecactivity.getRecreationalname());
 
-        Adoption aresadopt = new Adoption();
-        aresadopt.adoptionName = "Ana";
-        aresadopt.amountofmoney = 300;
-        System.out.println("\nAdoption Person Name: " + aresadopt.adoptionName);
-        System.out.println("Amount of Money: " + aresadopt.amountofmoney + "Lei");
+        Rescuer aresadopt = new Rescuer();
+        aresadopt.setAdoptionName("Ana");
+        aresadopt.setAmountofmoney(300);
+        System.out.println("\nAdoption Person Name: " + aresadopt.getAdoptionName());
+        System.out.println("Amount of Money: " + aresadopt.getAmountofmoney() + "Lei");
 
         Veterinary aresvet = new Veterinary();
-        aresvet.vetname = "Mihai";
-        aresvet.vetspecialization = "Cardiologie";
-        System.out.println("\nVeterinary Name: " + aresvet.vetname );
-        System.out.println("Veterinary Specialization: " + aresvet.vetspecialization);
+        aresvet.setVetname("Mihai");
+        aresvet.setVetspecialization("Cardiologie");
+        System.out.println("\nVeterinary Name: " + aresvet.getVetname());
+        System.out.println("Veterinary Specialization: " + aresvet.getVetspecialization());
 
 
-        Dog rex = new Dog();
-        rex.name = "Rex";
-        rex.breed = "Labrador";
-        rex.age = 2;
-        rex.health = 10;
-        rex.hungry = 3;
-        rex.mood = 10;
-        rex.weight = 16.4F;
-        rex.heightInCm = 55;
+        Animal rex = new Animal();
+        rex.setName("Rex");
+        rex.setBreed("Labrador");
+        rex.setColor("Gold");
+        rex.setAge(2F);
+        rex.setHealth(10);
+        rex.setHungry((byte) 3);
+        rex.setMood((byte)10);
+        rex.setWeight(16.4F);
+        rex.setHeightInCm(55);
 
-        System.out.println("\nName:" + rex.name);
-        System.out.println("Breed:" + rex.breed);
-        System.out.println("Age:" + rex.age);
-        System.out.println("Health:" + rex.health);
-        System.out.println("Hungry:" + rex.hungry);
-        System.out.println("Mood:" + rex.mood);
-        System.out.println("Mood: " + rex.mood);
-        System.out.println("Weight: " + rex.weight + " Kg");
-        System.out.println("Height: " + rex.heightInCm + " cm");
+        System.out.println("\nName:" + rex.getName());
+        System.out.println("Breed:" + rex.getBreed());
+        System.out.println("Color:" + rex.getColor());
+        System.out.println("Age:" + rex.getAge());
+        System.out.println("Health:" + rex.getHealth());
+        System.out.println("Hungry:" + rex.getHungry());
+        System.out.println("Mood:" + rex.getMood());
+        System.out.println("Weight: " + rex.getWeight() + " Kg");
+        System.out.println("Height: " + rex.getHeightInCm() + " cm");
 
-        DogFood rexfood = new DogFood();
-        rexfood.foodname = "Royal Canin";
-        System.out.println("\nFood Name: " + rexfood.foodname);
-        rexfood.price = "150 Lei";
-        System.out.println("Price: " + rexfood.price);
-        rexfood.quantity = "2.5 kg";
-        System.out.println("Quantity: " + rexfood.quantity);
-        rexfood.stock = "In Stock";
-        System.out.println(rexfood.stock);
+        AnimalFood rexfood = new AnimalFood();
+        rexfood.setFoodname("Royal Canin");
+        System.out.println("\nFood Name: " + rexfood.getFoodname());
+        rexfood.setPrice("150 Lei");
+        System.out.println("Price: " + rexfood.getPrice());
+        rexfood.setQuantity("2.5 kg");
+        System.out.println("Quantity: " + rexfood.getQuantity());
+        rexfood.setStock("In Stock");
+        System.out.println(rexfood.getStock());
 
         RecreationalActivity rexrecactivity = new RecreationalActivity();
-        rexrecactivity.recreationalname = "Walking";
-        System.out.println("\nRecreational Activity: " + rexrecactivity.recreationalname);
+        rexrecactivity.setRecreationalname("Walking");
+        System.out.println("\nRecreational Activity: " + rexrecactivity.getRecreationalname());
 
-        Adoption rexadopt = new Adoption();
-        rexadopt.adoptionName = "Dan";
-        rexadopt.amountofmoney = 400;
-        System.out.println("\nAdoption Person Name: " + rexadopt.adoptionName);
-        System.out.println("Amount of Money: " + rexadopt.amountofmoney + "Lei");
+        Rescuer rexadopt = new Rescuer();
+        rexadopt.setAdoptionName("Dan");
+        rexadopt.setAmountofmoney(400);
+        System.out.println("\nAdoption Person Name: " + rexadopt.getAdoptionName());
+        System.out.println("Amount of Money: " + rexadopt.getAmountofmoney() + "Lei");
 
         Veterinary rexvet = new Veterinary();
-        rexvet.vetname = "Vio";
-        rexvet.vetspecialization = "Ortopedie";
-        System.out.println("\nVeterinary Name: " + rexvet.vetname );
-        System.out.println("Veterinary Specialization: " + rexvet.vetspecialization);
+        rexvet.setVetname("Vio");
+        rexvet.setVetspecialization("Ortopedie");
+        System.out.println("\nVeterinary Name: " + rexvet.getVetname() );
+        System.out.println("Veterinary Specialization: " + rexvet.getVetspecialization());
 
-        Dog blackie = new Dog();
-        blackie.name = "Blackie";
-        System.out.println("\nName:" + blackie.name);
+        Animal blackie = new Animal();
+        blackie.setName("Blackie");
+        System.out.println("\nName:" + blackie.getName());
 
-        Dog freddie = new Dog();
-        freddie.name = "Freddie";
-        System.out.println("\nName:" + freddie.name);
+        Animal freddie = new Animal();
+        freddie.setName("Freddie");
+        System.out.println("\nName:" + freddie.getName());
     }
 }

@@ -1,7 +1,14 @@
 package AnimalRescue;
 
 public class RecreationalActivity {
-    public static String recreationalname;
+    private String recreationalname;
+
+    public String getRecreationalname(){
+        return recreationalname;
+    }
+    public void setRecreationalname(String recreationalname){
+        this.recreationalname = recreationalname;
+    }
 }
 
 
