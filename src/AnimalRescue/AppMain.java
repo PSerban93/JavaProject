@@ -1,13 +1,18 @@
 package AnimalRescue;
 
+import AnimalRescue.Animals.*;
+import AnimalRescue.Humans.Boy;
+import AnimalRescue.Humans.Girl;
+import AnimalRescue.Humans.Veterinary;
+
 public class AppMain {
 
 
     public static void main(String[] args) {
 
-        Animal ares = new Animal();
+        FrenchBulldog ares = new FrenchBulldog();
         ares.setName("Ares");
-        ares.setBreed("French bulldog");
+       // ares.setBreed("French bulldog");
         ares.setColor("Grey");
         ares.setAge(1.6F);
         ares.setHealth(10);
@@ -17,7 +22,7 @@ public class AppMain {
         ares.setHeightInCm(35.3F);
 
         System.out.println("Name: " + ares.getName());
-        System.out.println("Breed: " + ares.getBreed());
+        //System.out.println("Breed: " + ares.getBreed());
         System.out.println("Color: " + ares.getColor());
         System.out.println("Age: " + ares.getAge() + " years");
         System.out.println("Health: " + ares.getHealth());
@@ -25,13 +30,13 @@ public class AppMain {
         System.out.println("Mood: " + ares.getMood());
         System.out.println("Weight: " + ares.getWeight() + " Kg");
         System.out.println("Height: " + ares.getHeightInCm() + " cm");
-        //System.out.println("Favorite Food: " + ares.favoritefood);//
+
         ares.eat();
         ares.sleep();
         ares.speak();
         ares.play();
 
-        AnimalFood aresfood = new AnimalFood();
+        FrenchBulldogFood aresfood = new FrenchBulldogFood();
 
         aresfood.setFoodname("D&D ");
         System.out.println("\nFood Name: " + aresfood.getFoodname());
@@ -42,11 +47,11 @@ public class AppMain {
         aresfood.setStock("In Stock");
         System.out.println(aresfood.getStock());
 
-        RecreationalActivity aresrecactivity = new RecreationalActivity();
+        DogRecreationalActivity aresrecactivity = new DogRecreationalActivity();
         aresrecactivity.setRecreationalname("Running");
         System.out.println("\nRecreational Activity: " + aresrecactivity.getRecreationalname());
 
-        Rescuer aresadopt = new Rescuer();
+        Girl aresadopt = new Girl();
         aresadopt.setAdoptionName("Ana");
         aresadopt.setAmountofmoney(300);
         System.out.println("\nAdoption Person Name: " + aresadopt.getAdoptionName());
@@ -59,9 +64,9 @@ public class AppMain {
         System.out.println("Veterinary Specialization: " + aresvet.getVetspecialization());
 
 
-        Animal rex = new Animal();
+        Labrador rex = new Labrador();
         rex.setName("Rex");
-        rex.setBreed("Labrador");
+        //rex.setBreed("Labrador");
         rex.setColor("Gold");
         rex.setAge(2F);
         rex.setHealth(10);
@@ -71,7 +76,7 @@ public class AppMain {
         rex.setHeightInCm(55);
 
         System.out.println("\nName:" + rex.getName());
-        System.out.println("Breed:" + rex.getBreed());
+        //System.out.println("Breed:" + rex.getBreed());
         System.out.println("Color:" + rex.getColor());
         System.out.println("Age:" + rex.getAge());
         System.out.println("Health:" + rex.getHealth());
@@ -80,7 +85,7 @@ public class AppMain {
         System.out.println("Weight: " + rex.getWeight() + " Kg");
         System.out.println("Height: " + rex.getHeightInCm() + " cm");
 
-        AnimalFood rexfood = new AnimalFood();
+        LabradorFood rexfood = new LabradorFood();
         rexfood.setFoodname("Royal Canin");
         System.out.println("\nFood Name: " + rexfood.getFoodname());
         rexfood.setPrice("150 Lei");
@@ -90,11 +95,11 @@ public class AppMain {
         rexfood.setStock("In Stock");
         System.out.println(rexfood.getStock());
 
-        RecreationalActivity rexrecactivity = new RecreationalActivity();
+        DogRecreationalActivity rexrecactivity = new DogRecreationalActivity();
         rexrecactivity.setRecreationalname("Walking");
         System.out.println("\nRecreational Activity: " + rexrecactivity.getRecreationalname());
 
-        Rescuer rexadopt = new Rescuer();
+        Boy rexadopt = new Boy();
         rexadopt.setAdoptionName("Dan");
         rexadopt.setAmountofmoney(400);
         System.out.println("\nAdoption Person Name: " + rexadopt.getAdoptionName());
@@ -106,11 +111,11 @@ public class AppMain {
         System.out.println("\nVeterinary Name: " + rexvet.getVetname() );
         System.out.println("Veterinary Specialization: " + rexvet.getVetspecialization());
 
-        Animal blackie = new Animal();
+        Persian blackie = new Persian();
         blackie.setName("Blackie");
         System.out.println("\nName:" + blackie.getName());
 
-        Animal freddie = new Animal();
+        Persian freddie = new Persian();
         freddie.setName("Freddie");
         System.out.println("\nName:" + freddie.getName());
     }

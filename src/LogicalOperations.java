@@ -261,7 +261,7 @@ public class LogicalOperations {
         System.out.println("Count = " + count);
         System.out.println("Sum = " + suma);
         System.out.println("Average = ");
-        return suma / (8899 - 111 + 1);
+        return suma / count;
     }
 
     public float getAverageDivisibleBySeven(int start, int max) {
@@ -296,35 +296,154 @@ public class LogicalOperations {
             if (numarul % 3 != 0 && numarul % 5 != 0 && numarul % 7 != 0)
                 System.out.print(numarul + " ");
 
-                if (numarul % 3 == 0 && numarul % 5 != 0 && numarul % 7 != 0) {
-                    System.out.print("Coza ");
-                }
-                if (numarul % 5 == 0 && numarul % 3 != 0 && numarul % 7 != 0) {
-                    System.out.print("Loza ");
-                }
-                if (numarul % 7 == 0 && numarul % 3 != 0 && numarul % 5 != 0) {
-                    System.out.print("Woza ");
-                }
-                if (numarul % 3 == 0 && numarul % 5 == 0 && numarul % 7 != 0) {
-                    System.out.print("CozaLoza ");
-                }
-                if (numarul % 3 == 0 && numarul % 7 == 0 && numarul % 5 != 0) {
-                    System.out.print("CozaWoza ");
-                }
-                if (numarul % 5 == 0 && numarul % 7 == 0 && numarul % 3 != 0) {
-                    System.out.print("WozaLoza ");
-                }
-                if (numarul % 3 == 0 && numarul % 5 == 0 && numarul % 7 == 0) {
-                    System.out.print("CozaLozaWoza ");
+            else if (numarul % 3 == 0 && numarul % 5 != 0 && numarul % 7 != 0) {
+                System.out.print("Coza ");
+            } else if (numarul % 5 == 0 && numarul % 3 != 0 && numarul % 7 != 0) {
+                System.out.print("Loza ");
+            } else if (numarul % 7 == 0 && numarul % 3 != 0 && numarul % 5 != 0) {
+                System.out.print("Woza ");
+            } else if (numarul % 3 == 0 && numarul % 5 == 0 && numarul % 7 != 0) {
+                System.out.print("CozaLoza ");
+            } else if (numarul % 3 == 0 && numarul % 7 == 0 && numarul % 5 != 0) {
+                System.out.print("CozaWoza ");
+            } else if (numarul % 5 == 0 && numarul % 7 == 0 && numarul % 3 != 0) {
+                System.out.print("WozaLoza ");
+            } else if (numarul % 3 == 0 && numarul % 5 == 0 && numarul % 7 == 0) {
+                System.out.print("CozaLozaWoza ");
 
-                }
-                if (numarul % 11 == 0) {
+            } else {
+
+                System.out.print(numarul + " ");
+
+            }
+            if (numarul % 11 == 0) {
                 System.out.println();
             }
-                numarul++;
+            numarul++;
         }
     }
+
+    public int[] populateArray(int max) {
+        int[] myArray = new int[max];
+        for (int i = 0; i < max; i++) {
+            myArray[i] = i + 1;
+        }
+        return myArray;
+    }
+
+    public void printArray(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
+        }
+    }
+
+    public int[] evenArray(int[] array) {
+        int q = 0;
+        for (int e = 1; e <= 100; e++) {
+            if (e % 2 == 0) {
+                array[q] = e;
+                q++;
+            }
+        }
+        return array;
+    }
+
+
+    public float getAverageValueFromArray(int[] array) {
+        float sum = 0;
+
+        for (int i = 0; i < array.length; i++) {
+            sum = sum + array[i];
+
+        }
+        return (sum / array.length);
+    }
+
+    public boolean isValueInArray(int[] array, int value) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == value) ;
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public int checkNumberinarray(int[] ary, int nr) {
+        for (int i = 0; i < ary.length; i++) {
+            if (ary[i] == nr) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public String[] setArraygrid(int max){
+        String[] myArraygrid = new String[max];
+        for (int i = 0; i < max; i++){
+            myArraygrid[i] = "- \n";
+        }
+        return myArraygrid;
+    }
+
+
+    public void printGrid(String[] myArraygrid, int nr){
+        for (int i = 0; i <= nr; i++){
+            printGrid(myArraygrid);
+            System.out.println("\n");
+        }
+    }
+    public void printGrid(String[] myArraygrid){
+        for (int i = 0; i <= 9 ; i++){
+            System.out.print("- ");
+        }
+    }
+
+    public void removeNrFromArray(int[] tarr, int Value) {
+
+        int[] sarr = new int[tarr.length];
+        int j = 0;
+
+        for (int i = 0; i < tarr.length; i++) {
+
+            if (tarr[i] == Value)
+                continue;
+            sarr[j++] = tarr[i];
+        }
+        int[]farr= new int[j];
+        for(int i=0;i<j;i++)
+         farr[i]=sarr[i];
+        for (int l=0;l<farr.length;l++)
+        System.out.print(farr[l]+ ",");
+    }
+
+        public void secondminArray(int[] array) {
+            int min = 1000;
+            int min2 = 1000;
+            for (int i = 0; i < array.length; i++) {
+                if (array[i] < min) {
+                    min2 = min;
+                    min = array[i];
+                } else if (array[i] < min2) {
+                    min2 = array[i];
+                }
+            }
+            System.out.println(min2);
+        }
+
+            public void copyArray(int[] myArray3, int[] emptyArray) {
+
+                for (int i = 0, j = 0; i < myArray3.length; i++) {
+                    emptyArray[j] = myArray3[i];
+                    j++;
+                }
+                for(int i=0;i<emptyArray.length;i++)
+                System.out.print(emptyArray[i]+",");
+    }
 }
+
+
+
 
 
 

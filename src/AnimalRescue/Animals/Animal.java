@@ -1,4 +1,4 @@
-package AnimalRescue;
+package AnimalRescue.Animals;
 
 public class Animal {
     private String name;
@@ -20,39 +20,53 @@ public class Animal {
     public void setName(String name) {
         this.name = name;
     }
-    public String getBreed(){
+    /*public String getBreed(){
         return breed;
     }
     public void setBreed(String breed) {
         this.breed = breed;
+    }*/
+    public String getColor(){
+        return color;
     }
-    public String getColor(){ return color;
+    public void setColor(String color){
+        this.color = color;
     }
-    public void setColor(String color){this.color = color;
+    public float getAge(){
+        return age;
     }
-    public float getAge(){ return age;
+    public void setAge(float age){
+        this.age = age;
     }
-    public void setAge(float age){ this.age = age;
+    public float getHealth(){
+        return health;
     }
-    public float getHealth(){ return health;
+    public void setHealth(float health){
+        this.health = health;
     }
-    public void setHealth(float health){ this.health = health;
+    public byte getHungry(){
+        return hungry;
     }
-    public byte getHungry(){ return hungry;
+    public void setHungry(byte hungry){
+        this.hungry = hungry;
     }
-    public void setHungry(byte hungry){ this.hungry = hungry;
+    public byte getMood(){
+        return mood;
     }
-    public byte getMood(){ return mood;
+    public void setMood(byte mood){
+        this.mood = mood;
     }
-    public void setMood(byte mood){ this.mood = mood;
+    public float getWeight(){
+        return weight;
     }
-    public float getWeight(){ return weight;
+    public void setWeight(float weight){
+        this.weight = weight;
     }
-    public void setWeight(float weight){ this.weight = weight;
+    public float getHeightInCm(){
+        return heightInCm;
     }
-    public float getHeightInCm(){ return heightInCm;
-    }
-    public void setHeightInCm(float heightInCm){ this.heightInCm = heightInCm;
+    public void setHeightInCm(float heightInCm){
+        this.heightInCm = heightInCm;
     }
 
 

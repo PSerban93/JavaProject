@@ -1,4 +1,4 @@
-package AnimalRescue;
+package AnimalRescue.Animals;
 
 public class AnimalFood {
     private String foodname;
