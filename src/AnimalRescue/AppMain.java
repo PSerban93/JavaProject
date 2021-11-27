@@ -85,6 +85,8 @@ public class AppMain {
         System.out.println("Weight: " + rex.getWeight() + " Kg");
         System.out.println("Height: " + rex.getHeightInCm() + " cm");
 
+        rex.speak();
+
         LabradorFood rexfood = new LabradorFood();
         rexfood.setFoodname("Royal Canin");
         System.out.println("\nFood Name: " + rexfood.getFoodname());
@@ -114,9 +116,11 @@ public class AppMain {
         Persian blackie = new Persian();
         blackie.setName("Blackie");
         System.out.println("\nName:" + blackie.getName());
+        blackie.speak();
 
         Persian freddie = new Persian();
         freddie.setName("Freddie");
         System.out.println("\nName:" + freddie.getName());
+        freddie.speak();
     }
 }

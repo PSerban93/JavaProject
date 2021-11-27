@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class LogicalOperations {
 
     public int getHigherNumber(int first, int second) {
@@ -378,23 +382,24 @@ public class LogicalOperations {
         return -1;
     }
 
-    public String[] setArraygrid(int max){
+    public String[] setArraygrid(int max) {
         String[] myArraygrid = new String[max];
-        for (int i = 0; i < max; i++){
+        for (int i = 0; i < max; i++) {
             myArraygrid[i] = "- \n";
         }
         return myArraygrid;
     }
 
 
-    public void printGrid(String[] myArraygrid, int nr){
-        for (int i = 0; i <= nr; i++){
+    public void printGrid(String[] myArraygrid, int nr) {
+        for (int i = 0; i <= nr; i++) {
             printGrid(myArraygrid);
             System.out.println("\n");
         }
     }
-    public void printGrid(String[] myArraygrid){
-        for (int i = 0; i <= 9 ; i++){
+
+    public void printGrid(String[] myArraygrid) {
+        for (int i = 0; i <= 9; i++) {
             System.out.print("- ");
         }
     }
@@ -410,37 +415,149 @@ public class LogicalOperations {
                 continue;
             sarr[j++] = tarr[i];
         }
-        int[]farr= new int[j];
-        for(int i=0;i<j;i++)
-         farr[i]=sarr[i];
-        for (int l=0;l<farr.length;l++)
-        System.out.print(farr[l]+ ",");
+        int[] farr = new int[j];
+        for (int i = 0; i < j; i++)
+            farr[i] = sarr[i];
+        for (int l = 0; l < farr.length; l++)
+            System.out.print(farr[l] + ",");
     }
 
-        public void secondminArray(int[] array) {
-            int min = 1000;
-            int min2 = 1000;
-            for (int i = 0; i < array.length; i++) {
-                if (array[i] < min) {
-                    min2 = min;
-                    min = array[i];
-                } else if (array[i] < min2) {
-                    min2 = array[i];
-                }
+    public void secondminArray(int[] array) {
+        int min = 1000;
+        int min2 = 1000;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < min) {
+                min2 = min;
+                min = array[i];
+            } else if (array[i] < min2) {
+                min2 = array[i];
             }
-            System.out.println(min2);
         }
+        System.out.println(min2);
+    }
 
-            public void copyArray(int[] myArray3, int[] emptyArray) {
+    public void copyArray(int[] myArray3, int[] emptyArray) {
 
-                for (int i = 0, j = 0; i < myArray3.length; i++) {
-                    emptyArray[j] = myArray3[i];
-                    j++;
-                }
-                for(int i=0;i<emptyArray.length;i++)
-                System.out.print(emptyArray[i]+",");
+        for (int i = 0, j = 0; i < myArray3.length; i++) {
+            emptyArray[j] = myArray3[i];
+            j++;
+        }
+        for (int i = 0; i < emptyArray.length; i++)
+            System.out.print(emptyArray[i] + ",");
+    }
+
+    public static int[] insertX(int n, int iarr[], int x, int pos) {
+        int i;
+        int newarr[] = new int[n + 1];
+
+        for (i = 0; i < n + 1; i++) {
+            if (i < pos - 1)
+                newarr[i] = iarr[i];
+            else if (i == pos - 1)
+                newarr[i] = x;
+            else
+                newarr[i] = iarr[i - 1];
+        }
+        return newarr;
+    }
+
+    public void getBigandSmall() {
+        int small;
+        int large;
+        int i;
+        int a[] = new int[]{33, 53, 73, 94, 22, 45, 23, 87, 13, 63};
+        int n = a.length;
+        large=small=a[0];
+        for(i=1;i<n;++i) {
+            if (a[i] > large)
+                large = a[i];
+
+            if (a[i] < small)
+                small = a[i];
+        }
+        System.out.println("Array: " + (Arrays.toString(a)));
+        System.out.print("Small " + small );
+        System.out.print("\nBig " + large );
+    }
+
+    public void invertArray(int inarr[]){
+        for(int i=inarr.length-1;i>=0;i--)
+            System.out.print(inarr[i] + "  ");
+    }
+
+
+    public List<Integer> getPopulatedList(int max) {
+        List<Integer> myList = new ArrayList<>();
+        for (int i = 1; i <= max; i++) {
+            myList.add(i);
+        }
+        return myList;
+    }
+
+    public List<Integer> addtoList(List<Integer> myList, int number) {
+        myList.add(number);
+        return myList;
+    }
+
+    public void printList(List<Integer> myList2) {
+        for (int i = 0; i < myList2.size(); i++) {
+            System.out.println(myList2.get(i));
+        }
+    }
+
+    public void printListFromNumber(List<Integer> myList, int number) {
+        for (int i = number; i <= myList.size(); i++) {
+            System.out.println(myList.get(i - 1));
+        }
+    }
+
+    public void printReverse(List<Integer> myList, int nrs) {
+        for (int i = myList.size(); i >= nrs; i--) {
+            System.out.println(myList.get(i - 1));
+        }
+    }
+
+    public List<String> addStringtoPos(List<String> slist, int poz, String prmt) {
+        slist.add(poz, prmt);
+        return slist;
+    }
+
+    public List<String> addStringtofrstPos(List<String> slist, String parameter) {
+        slist.add(0, parameter);
+        return slist;
+    }
+
+    public void valorisipozitie(List<String> vllist) {
+        for (int i = 0; i < vllist.size(); i++) {
+            String valsipoz = "Poz. " + i + " are val. " + vllist.get(i);
+            System.out.println(valsipoz);
+        }
+    }
+
+    public int getBgstnr(List<Integer> bgstlist) {
+        int max = 0;
+        for (int i = 0; i < bgstlist.size(); i++) {
+            if (bgstlist.get(i) > max) {
+                max = bgstlist.get(i);
+            }
+        }
+        return max;
+    }
+
+    public void nrpare(List<Integer> parlist) {
+        for (int i = 1; i <= parlist.size(); i++) {
+            if (i % 2 == 0) {
+                System.out.print(i + " ");
+
+            }
+        }
     }
 }
+
+
+
+
+
 
 
 

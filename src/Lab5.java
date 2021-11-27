@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.stream.IntStream;
 
 public class Lab5 {
@@ -118,5 +119,41 @@ public class Lab5 {
         int[] myArray3 = {1,6,35,24,42,91};
         int[] emptyArray = new int[myArray3.length];
         op.copyArray(myArray3,emptyArray);
+
+        System.out.println("""
+                
+                \nTema Optionala:
+                1. Creati o metoda care insereze un element pe o pozitie specifica intr-un array.""");
+
+        int[] iarr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        int n = 10;
+        System.out.println("\nArray:\n"
+                + Arrays.toString(iarr));
+        int x = 40;
+        int pos = 5;
+
+        iarr = op.insertX(n, iarr, x, pos);
+        System.out.println("\nArray cu elementul inserat:\n"
+                + Arrays.toString(iarr));
+
+
+        System.out.println("""
+                
+                2. Creati o metoda care sa gaseasca cel mai mare si cel mai mic numar dintr-un array.
+                """);
+
+        op.getBigandSmall();
+
+        System.out.println("""
+                              
+                \n3. Creati o metoda care sa inverseze valorile unui array de int-uri.
+                """);
+        op.invertArray(iarr);
+
+        //System.out.println("""
+                
+      //          4. Creati o metoda care sa gaseasca toate valorile duplicate dintr-un array.
+     //           """);
+
         }
     }

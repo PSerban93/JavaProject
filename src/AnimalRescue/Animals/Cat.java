@@ -1,4 +1,19 @@
 package AnimalRescue.Animals;
 
-public class Cat extends Animal{
+public abstract class Cat extends Animal{
+
+
+    @Override
+    public void eat() {
+
+    }
+
+    @Override
+    public void sleep() {
+
+    }
+
+
+
+
 }
