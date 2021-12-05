@@ -1,6 +1,6 @@
 package AnimalRescue.Animals;
 
-public class AnimalFood {
+public abstract class AnimalFood {
     private String foodname;
     private String price;
     private String quantity;

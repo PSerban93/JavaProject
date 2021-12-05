@@ -1,7 +1,5 @@
 package AnimalRescue.Humans;
 
-public class Rescuer extends Humans {
-
-
+public abstract class Rescuer extends Humans {
 
 }

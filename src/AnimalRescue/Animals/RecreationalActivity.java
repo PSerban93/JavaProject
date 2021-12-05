@@ -1,8 +1,7 @@
 package AnimalRescue.Animals;
 
-public class RecreationalActivity {
+public abstract class RecreationalActivity {
     private String recreationalname;
-
     public String getRecreationalname(){
         return recreationalname;
     }

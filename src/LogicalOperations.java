@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
 public class LogicalOperations {
 
     public int getHigherNumber(int first, int second) {
@@ -340,7 +339,11 @@ public class LogicalOperations {
             System.out.println(array[i]);
         }
     }
-
+    public void printArrayinline(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+    }
     public int[] evenArray(int[] array) {
         int q = 0;
         for (int e = 1; e <= 100; e++) {
@@ -552,7 +555,18 @@ public class LogicalOperations {
             }
         }
     }
-}
+
+    public void getPosition (int[] aArray, int pos ) {
+        try {
+                System.out.println("The Number in Position " + pos +" is: ");
+                System.out.println(aArray[pos]);
+            }
+            catch (ArrayIndexOutOfBoundsException err){
+                System.out.println("Inside catch, number too large");
+            }
+        }
+    }
+
 
 
 

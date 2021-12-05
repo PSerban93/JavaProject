@@ -1,3 +1,5 @@
+package Program;
+
 public class Calculator {
 
     public static int suma(int Nr1, int Nr2) {
