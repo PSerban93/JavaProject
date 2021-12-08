@@ -99,9 +99,11 @@ public class Calculator {
         System.out.println(+first + " Inch to");
         double inch = first;
         System.out.println("Metri = ");
-        double metri = second;
+        double metri = first * 0.0254;
         double rezultatconvert = metri;
         return rezultatconvert;
+
+
     }
     public static void calculviteza(double distance, int hour, int minutes, int seconds) {
         double mps = distance / ((hour * 3600) + (minutes * 60) + seconds);

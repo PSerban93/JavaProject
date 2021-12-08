@@ -1,10 +1,22 @@
 package Program;
 
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Login {
+    //Username_Passwords username_passwords = new Username_Passwords();
 
+    public void login() {
+        HashMap<String, String> login = new HashMap<String, String>();
 
+        login.put("Serban", "321456Psc");
+        login.put("Andrei", "123456A");
+        login.put("Ana", "32114A");
+        login.put("Ares", "147852A");
+    }
+    protected HashMap getlogin(){
+        return getlogin();
+    }
     public boolean isLoggedIn(){
         Scanner scan = new Scanner(System.in);
         String username = "Serban";

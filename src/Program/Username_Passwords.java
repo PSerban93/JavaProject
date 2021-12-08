@@ -1,14 +1,11 @@
 package Program;
 
-import java.util.HashMap;
+/*public class Username_Passwords {
 
-public class Username_Passwords {
-
-    public static void main(String[] args) {
-        // Create a HashMap object called capitalCities
+    public void login() {
         HashMap<String, String> login = new HashMap<String, String>();
 
-        // Add keys and values (Country, City)
+
 
         login.put("Serban", "321456Psc");
         login.put("Andrei", "123456A");
@@ -18,4 +15,4 @@ public class Username_Passwords {
     protected HashMap getlogin(){
         return getlogin();
     }
-}
+}*/

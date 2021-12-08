@@ -3,13 +3,26 @@ package Program;
 public class Messages {
     public static final String SALUTE = "Hello!\n";
     public static final String MENU = "Please select an option:\n"+
+                    "1. Operatii Matematice\n"+
+                    "2. Convertor\n"+
+                    "0. Exit\n";
+
+    public static final String OP_MAT ="Please select an option:\n"+
                     "1. Suma\n" +
                     "2. Scadere\n" +
                     "3. Inmultire\n" +
                     "4. Imparire\n" +
                     "5. Medie\n" +
                     "6. Rest\n" +
-                    "0. Exit\n";
+                    "0. Return\n";
+    public static final String CONVERT = "Please select an option:\n"+
+                    "1. Convert Fahrenheit to Celsius \n"+
+                    "2. Convert Celsius to Fahrenheit\n"+
+                    "3. Convert Inch to Meters\n"+
+                    "4. Convert Meters to Inch\n"+
+                    "0. Return\n";
+
+
     public static final String USERNAME = "Username: ";
     public static final String PASSWORD = "Password: ";
     public static final String SUCCESS = "Success!\n";
